@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>个人主页</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<style type="text/css">
+	a{
+		text-decoration: none;
+	}
+	li{
+		list-style: none;
+	}
+	.main-header{
+		width: 100%;
+		height: 54px;
+		background: #364F6B;
+	}
+	.main-header ul{
+		display: inline-block;
+	}
+	.header-left li{
+		display: inline-block;
+		margin:10px 10px;
+	}
+	.websiteicon{
+		margin-left: 30px !important;
+	}
+	.websiteicon img{
+		width: 50px;
+		height: 36px;
+	}
+	.search input{
+		vertical-align: bottom;
+		border-radius: 12px;
+		width: 300px;
+		height: 30px; 
+		outline: none;
+		text-indent:5px;
+		color:green;
+		font-size: 17px;
+		border:1px solid gray;
+	}
+	.search input:focus{
+		border:1px solid green;
+	}
+	.header-right{
+		float: right;
+	}
+	.header-right li{
+		display: inline-block;
+		margin:0 10px;
+		line-height: 60px;
+		font-size: 18px;
+	}
+	.header-right li a{
+		color: #fff;
+	}
+	.ownsetting{
+		margin-right: 30px !important;
+	}
+	.main-content{
+		width:1000px;
+		margin:0 auto;
+	}
+	.nuclear-main{
+		display: inline-block;
+	}
+	.express{
+		width:720px;
+		height: 200px;
+	}
+	.express h3{
+		margin: 10px 2px;
+	}
+	.express textarea{
+		margin:0 auto;
+		width:700px;
+		height: 120px;
+		border-radius: 10px;
+		outline: none;
+		text-indent:5px;
+		font-size: 20px;
+		resize: none;
+	}	
+	.express textarea:focus{
+		border: 1px solid gray;
+	}
+	.express button{
+		float: right;
+		margin: 10px 40px 0px 0px;
+		width: 80px;
+		height: 30px;
+	}
+	.exhibition{
+		width:720px;
+		height: 700px;
+	}
+	.exhibition ul{
+		width:700px;
+		margin:0 auto;
+	}
+	#weiboList img{
+		width: 200px;
+		height: 200px;
+	}
+	#weiboList span{
+		display: inline-block;
+		width: 100px;
+		height: 40px;
+/*		border:1px solid #000;*/
+		color: gray;
+		font-size: 20px;
+		text-align: center;
+		line-height: 40px;
+		margin-top: 5px;
+		cursor:pointer;
+		word-spacing: 5px;
+		letter-spacing: 5px;
+	}
+	.exhibition h4{
+		margin: 15px 2px 12px;
+	}
+	.usermessage{
+		display: inline-block;
+		vertical-align: top;
+		margin-top: 20px;
+		width: 270px;
+		height: 700px;
+		text-align: center;
+	}
+	.usermessage img{
+		margin: 10px 0px 5px; 
+		width: 80px;
+		height: 80px;
+		border-radius: 50px;
+		text-align: right;
+	}
+	.usermessage h3{
+		margin:5px 0px 10px;
+	}
+	.main-footer{
+		width: 960px;
+		height: 80px;
+		margin: 0 auto;
+		/*background: #FC5185;*/
+	}
+	.main-footer div{
+		display: inline-block;
+		margin:0 20px;
+	}
+	.main-footer ul li{
+		margin: 10px 5px;
+	}
+	</style>
+</head>
+<body>
+
+<div class="main-header">
+	<ul class="header-left">
+		<li class="websiteicon"><a href="index.html"><img src="images/UI2.png" title="首页" alt="首页"/></a></li>
+		<li class="search"><input type="search" placeholder="搜索" results="s"/></li>
+	</ul>
+	<ul class="header-right">
+		<li><a href="main.html">首页</a></li>
+		<li class="ownsetting"><a href="">个人设置</a></li>
+	</ul>
+</div>
+
+<div class="main-content">
+	<!-- 最终要 -->
+	<div class="nuclear-main">
+		<div class="express">
+		<h3>有什么新鲜事，告诉大家</h3>
+			<textarea></textarea>
+			<button>发布</button>
+		</div>
+		<div class="exhibition">
+			<ul id="weiboList">
+				<li>
+					<h4>环球时报</h4>
+					<p>【一份迟到几十年的礼物】邮局的老爷爷在地板缝隙中，意外发现了一张被忘记寄出的圣诞卡……满满的感动！礼物虽然迟到，但是心意不会过期！[心]，或许这才是圣诞节正确的打开方式~</p>
+					<img/>
+					<div>
+					<span>转发</span>
+					<span>赞 12</span>
+					<span>评论 2</span>	
+					</div>	
+				</li>
+			</ul>
+
+		</div>
+	</div>
+
+	<div class="usermessage" id="usermessage">
+		<img id="headImg" src="images/your name.jpg"/>
+		<h3 id="username">mumu</h3>
+		<span id="info">微博：50 关注：41 粉丝：10</span>
+	</div>
+</div>
+
+
+<div class="main-footer">
+	<div class="feedback">
+		<ul>
+		<li>关于我们</li>
+		<li>建议反馈</li>
+		<li>合作伙伴</li>
+		</ul>
+	</div>
+	<div calss="hostmessage">
+		<ul>
+		<li>关注创作者</li>
+		<li>微博</li>
+		<li>github</li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>
