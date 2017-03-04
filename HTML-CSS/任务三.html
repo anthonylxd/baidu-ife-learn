@@ -5,22 +5,19 @@
 	<title>html/css任务三</title>
 </head>
 <link rel="stylesheet" type="text/css" href="css/normalize.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/任务三absolute.css"> -->
 <style type="text/css">
 .wraper {
-	position: relative;
 	margin:20px;
 	background: #eee;
 	border:1px solid #999;
-	width: 100%;
 	height: auto;
 }
 .wraper div{
 	background: #fff;
 }
 .leftbox {
-	position: absolute;
-	left:0;
-	top: 0;
+	float: left;
 	width: 200px;
 	padding: 20px;
 	margin:20px;
@@ -36,9 +33,7 @@
 	border: 1px solid red;
 }
 .rightbox {
-	position: absolute;
-	right:0;
-	top: 0;
+	float: right;
 	width: 120px;
 	margin:20px;
 }
@@ -52,7 +47,6 @@
 	height: 80px;
 	padding: 20px;
 	margin: 0 auto;
-	border:none;
 }
 </style>
 <body>
@@ -62,6 +56,15 @@
 		<img src="images/aga.png">
 		<label>我的世界</label>
 	</div>
+	
+	<div class="rightbox">
+		<ul>
+			<li><img src="images/aga.png"></li>
+			<li><img src="images/aga.png"></li>
+			<li><img src="images/aga.png"></li>
+			<li><img src="images/aga.png"></li>
+		</ul>
+	</div>	
 
 	<div class="contentbox">
 		<label>任务描述</label>
@@ -79,14 +82,6 @@
 其他效果图中给出的标识均被正确地实现。</pre>
 	</div>
 
-	<div class="rightbox">
-		<ul>
-			<li><img src="images/aga.png"></li>
-			<li><img src="images/aga.png"></li>
-			<li><img src="images/aga.png"></li>
-			<li><img src="images/aga.png"></li>
-		</ul>
-	</div>	
 </div>
 </body>
 </html>
