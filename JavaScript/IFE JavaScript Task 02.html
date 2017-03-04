@@ -38,8 +38,8 @@ var aqiData = [
   if(aqi[1] > 60) {
     var aqilist = document.getElementById("aqi-list");
     var li = document.createElement("li");
-    li.innerHTML = "第"+nums[j]+"名：" +aqi[0]+","+ aqi[1];
-    aqilist.append(li);
+    li.innerHTML = "第"+nums[j]+"名：" +aqi[0]+"，"+ aqi[1];
+    aqilist.appendChild(li);
     j++;
   }
 }
