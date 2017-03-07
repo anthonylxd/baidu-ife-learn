@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>IFE JavaScript Task 04</title>
+<style type="text/css">
+#list {
+	padding: 0;
+	margin: 0;
+}
+#list li {
+	margin: 20px 10px;
+	float: left;
+	list-style: none;
+	border:1px solid #e8e8e8;
+	background: #eee;
+	cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div >
+	<input id="input" type="text" name="num">
+	<button id="lefton">左侧入</button>
+	<button id="righton">右侧入</button>
+	<button id="leftout">左侧出</button>
+	<button id="rightout">右侧出</button>
+</div>
+<div>
+	<ul id="list">
+		<li>5</li>
+		<li>11</li>
+		<li>20</li>
+		<li>27</li>
+		<li>32</li>
+		<li>45</li>
+	</ul>
+</div>
+<script type="text/javascript">
+	var lefton = document.getElementById("lefton");
+	var righton = document.getElementById("righton");
+	var leftout = document.getElementById("leftout");
+	var rightout = document.getElementById("rightout"); 
+	var list = document.getElementById("list");
+
+	lefton.onclick = function() {
+		var newContent = inputcheck();
+		if(newContent == false) {
+		return;
+		}else{
+		list.insertBefore(newContent,list.firstChild);	
+		}
+	}
+
+	righton.onclick = function() {
+		var newContent = inputcheck();
+		if(newContent == false) {
+		return;
+		}else{
+		list.appendChild(newContent);	
+		}
+	}
+
+	leftout.onclick = function() {
+		var deleteNode = list.firstChild;
+		list.removeChild(Childs(list,"first"));
+	}
+
+	rightout.onclick = function() {
+		var deleteNode =  list.removeChild(list.lastChild);
+		list.removeChild(Childs(list,"last"));
+	}
+	
+	//获得输入值，检查，添加删除事件
+	function inputcheck() {
+		var input = document.getElementById("input");
+		var newtext = input.value.trim();
+		input.value = "";
+		if (newtext == "") {
+			alert("请正确输入");
+			return false;
+		}
+		var newContent = document.createElement("li");
+		newContent.innerHTML = newtext;
+		newContent.onclick = deleteNode;
+		return newContent;
+	}
+
+	// 由于不同浏览器会有不同的解析，如果是用Chrome或者用firefox那么就会解析有空白节点，点击第一次的时候，是删除的空白节点，再点第二次的时候菜是删除相应的节点
+	function Childs(data,index){
+ 		if(index = "first"){
+		var dd = data.firstChild;
+ 		}else{
+ 		var dd = data.lasttChild;
+ 		}
+		while (dd.nodeType != 1){
+		data.removeChild(dd);
+		dd = data.firstChild
+	}
+		return dd
+	}
+
+	//为每个数字添加点击删除事件
+	for (var i = list.childNodes.length - 1; i >= 0; i--) {
+		list.childNodes[i].onclick = deleteNode;
+	}
+
+	//删除数字
+	function deleteNode() {
+			list.removeChild(this);
+		}
+</script>
+</body>
+</html>

@@ -53,10 +53,11 @@ function getData() {
     var aircity = sources[i];
     var city = aircity.innerText.substring(0,2);
     var air = aircity.innerText.substring(7,9);
-    var aircitys = new Array();
-    aircitys[0] = city;
-    aircitys[1] = air;
-    data[j] = aircitys;
+    // var aircitys = new Array();
+    // aircitys[0] = city;
+    // aircitys[1] = air;
+    // data[j] = aircitys;
+    data.push([city,air]);
     j++;
   }
   return data;
