@@ -88,14 +88,18 @@
 
 	// 由于不同浏览器会有不同的解析，如果是用Chrome或者用firefox那么就会解析有空白节点，点击第一次的时候，是删除的空白节点，再点第二次的时候菜是删除相应的节点
 	function Childs(data,index){
- 		if(index = "first"){
+ 		if(index == "first"){
 		var dd = data.firstChild;
  		}else{
- 		var dd = data.lasttChild;
+ 		var dd = data.lastChild;
  		}
 		while (dd.nodeType != 1){
 		data.removeChild(dd);
-		dd = data.firstChild
+		if(index = "first"){
+		dd = data.firstChild;
+ 		}else{
+ 		dd = data.lastChild;
+ 		}
 	}
 		return dd
 	}
