@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-	<title>IFE JavaScript Task 04</title>
+	<title>IFE JavaScript Task 05</title>
 <style type="text/css">
 #list {
 	padding: 0;
@@ -10,11 +10,13 @@
 }
 #list li {
 	margin: 20px 10px;
-	float: left;
 	list-style: none;
 	border:1px solid #e8e8e8;
 	background: #eee;
 	cursor: pointer;
+	/*float: left;*/
+	display: inline-block;
+	vertical-align: bottom;
 }
 </style>
 </head>
@@ -25,6 +27,7 @@
 	<button id="righton">右侧入</button>
 	<button id="leftout">左侧出</button>
 	<button id="rightout">右侧出</button>
+	<button id="sort">排序</button>
 </div>
 <div>
 	<ul id="list">
@@ -37,6 +40,7 @@
 	var leftout = document.getElementById("leftout");
 	var rightout = document.getElementById("rightout"); 
 	var list = document.getElementById("list");
+	var sort = document.getElementById("sort");
 
 	lefton.onclick = function() {
 		var newContent = inputcheck();
@@ -66,18 +70,50 @@
 		list.removeChild(Childs(list,"last"));
 	}
 	
+	sort.onclick = function() {
+	bubbleSort(list.childNodes);
+	}
+//冒泡排序
+function bubbleSort(arr) {
+    var i = arr.length, j;
+    var tempExchangVal;
+    while (i > 0) {
+        for (j = 0; j < i - 1; j++) {
+            if (arr[j].innerHTML > arr[j + 1].innerHTML) {
+                tempExchangVal = arr[j].innerHTML;
+                arr[j].innerHTML = arr[j + 1].innerHTML;
+                arr[j + 1].innerHTML = tempExchangVal;
+                arr[j].style.height = arr[j + 1].innerHTML +"px";
+                arr[j + 1].style.height = tempExchangVal + "px";
+            }
+        }
+        i--;
+    }
+    return arr;
+}
+
 	//获得输入值，检查，添加删除事件
 	function inputcheck() {
 		var input = document.getElementById("input");
 		var newtext = input.value.trim();
 		input.value = "";
-		if (newtext == "") {
-			alert("请正确输入");
+		if (newtext == "" || isNaN(newtext)) {
+			alert("请输入10-100以内的数字");
+			return false;
+		}else{
+			if(newtext<10 || newtext>100){
+			alert("请输入10-100以内的数字");
+			return false;
+			}
+		}
+		if(list.childNodes.length > 60) {
+			alert("仅能输入60个");
 			return false;
 		}
 		var newContent = document.createElement("li");
 		newContent.innerHTML = newtext;
 		newContent.onclick = deleteNode;
+		newContent.style.height = newtext +"px";
 		return newContent;
 	}
 
