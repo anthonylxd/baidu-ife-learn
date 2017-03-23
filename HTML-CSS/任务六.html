@@ -2,24 +2,78 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta http-equiv="refresh" content="8">
 	<title>任务六</title>
 <link rel="stylesheet" type="text/css" href="css/normalize.css">
 <style type="text/css">
-.header img {
-	width: 200px;
+body{
+	font-family: "MicrosoftJhengHei";
+}
+.wraper {
+	width: 980px;
+	height: 1386px;
+	margin: 0 auto;
+}
+.header {
+	width: 892px;
+	border-bottom: 2px solid #938e8c;
+	font-family: "SimHei";
+	margin-bottom:24px; 
+}
+.header div {
+	display: inline-block;
+	/*vertical-align: bottom;*/
+}
+.header-icon {
+	width: 110px;
 	height: 60px;
+	background: url(images/nice.png);
+}
+.header-date {
+	float: right;
+}
+.theme {
+	width: 100%;
+	height: 360px;
+}
+.theme div {
+	display: inline-block;
+}
+.theme-img {
+	background: url(images/nice.png);
+	width: 641px;
+	height: 301px;
+}
+.theme-img div {
+	width: 191px;
+	height: 301px;
+	opacity: 0.4;
+	background: #eee;
+}
+.theme-img-left {
+	float: left;
+}
+.theme-img-right {
+	float: right;
+}
+.theme-text {
+	border-top: 
 }
 </style>
 </head>
 <body>
+<div class="wraper">
 <header class="header">
-	<img src="images/nice.png">
-	<label>2017.03</label>
+	<div class="header-icon">ife.baidu.com</div>
+	<div class="header-date">2017.03</div>
 </header>
 
 <div class="theme">
-	<img src="images/nice.png">
-	<div>
+	<div class="theme-img">
+		<div class="theme-img-left"></div>
+		<div class="theme-img-right"></div>
+	</div>
+	<div class="theme-text">
 		<h2></h2>
 		<h2></h2>
 		<h3></h3>
@@ -45,7 +99,7 @@
 </div>
 
 <footer class="footer"></footer>
-
+</div>
 <script type="text/javascript" src=""></script>
 </body>
 </html>
