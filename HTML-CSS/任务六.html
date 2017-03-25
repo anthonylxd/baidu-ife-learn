@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta http-equiv="refresh" content="8">
+<meta http-equiv="refresh" content="32">
 	<title>任务六</title>
 <link rel="stylesheet" type="text/css" href="css/normalize.css">
 <style type="text/css">
@@ -57,8 +57,109 @@ body{
 	float: right;
 }
 .theme-text {
-	border-top: 
+	display: block;
+	word-break: break-all;
+	width: 203px;
+	margin-left:18px; 
+	border-top: 2px solid #cc8091;
 }
+.theme-text h1 {
+	border-bottom: 2px solid #938e8c;
+	word-spacing: 40px;
+	font-size: 24px;
+	width: 64px;
+	font-weight: blod;
+	margin: 6px 0px;
+}
+.theme-text-title {
+	border-bottom: 2px solid #938e8c;
+	word-spacing: 40px;
+	font-size: 24px;
+	font-weight: bold;
+	width: 130px;
+}
+.theme-text-main {
+	font-size: 116px;
+	color: #76b85b;
+	font-style: italic;
+	margin: 50px 0px 0px 0px;
+}
+.theme-text-content {
+	font-size: 12px;
+	color: #676767;
+	word-spacing: 10px;
+	font-family: "楷体";
+}
+.theme-text-footer {
+	font-size: 55px;
+	color: #cc8091;
+	border: none;
+}
+.theme-text-footer span:nth-child(2) {
+	font-size: 18px;
+}
+
+
+.content div {
+	display: inline-block;
+	width: 210px;
+	margin: 0px 12px;
+}
+.content h3 {
+	width: 36px;
+	border-bottom: 2px solid #d2994f;
+	margin:6px 2px 14px 12px;
+	padding-bottom: 4px;
+	color: #cc7680;
+	font-size: 16px;
+	font-weight: bold;
+}
+.content p{
+	font-size: 12px;
+	color: 231815;
+	opacity: 0.7;
+	padding: 10px;
+}
+
+.main {
+	
+}
+.main div:first-child {
+	width: 420px;
+}
+.main div{
+	display: inline-block;
+}
+.main h1{
+	width: 100px;
+	font-weight: bold;
+	border-bottom: 4px solid #d2994f;
+	margin: 10px 0px;
+	padding-bottom: 10px;
+}
+.main p{
+	font-size: 14px;
+	color: 231815;
+	opacity: 0.7;
+	padding: 10px;
+	letter-spacing: 2px;
+}
+
+.main-right-img {
+	display: block;
+	background: url(images/nice.png);
+	background-size:100% 100%; 
+	width: 458px;
+	height:275px;
+	vertical-align: text-bottom;
+}
+
+.footer {
+	width: 892px;
+	border-bottom: 1px solid #938e8c;
+	margin:24px 0px ;
+}
+
 </style>
 </head>
 <body>
@@ -74,28 +175,53 @@ body{
 		<div class="theme-img-right"></div>
 	</div>
 	<div class="theme-text">
-		<h2></h2>
-		<h2></h2>
-		<h3></h3>
-		<p></p>
-		<p></p>
+		<h1>ABOUT</h1>
+		<div class="theme-text-title">TECHNOLOGE</div>
+		<p class="theme-text-content">about technologe about technologe about technologe</p>
+		<p class="theme-text-main">700</p>
+		<div class="theme-text-footer">
+			<span>3.2</span>
+			<span>css</span>
+		</div>
 	</div>
 </div>
 
 <div class="content">
-	<span>
-		<h3></h3>
-	</span>
-	<span>
-		<h3></h3>
-	</span>
-	<span>
-		<h3></h3>
-	</span>
+	<div>
+		<h3>WHAT</h3>
+		<P>只需要完成HTML，CSS代码编写，不需要写JavaScript
+设计稿中的图片、文案均可自行设定
+在Chrome中完美实现符合标注中的各项说明
+有能力的同学可以尝试跨浏览器的兼容性
+有能力的同学可以在实现一遍后尝试用less, sass或者stylus等再实现一次</P>
+	</div>
+	<div>
+		<h3>WHEN</h3>
+		<P>只需要完成HTML，CSS代码编写，不需要写JavaScript
+设计稿中的图片、文案均可自行设定
+在Chrome中完美实现符合标注中的各项说明
+有能力的同学可以尝试跨浏览器的兼容性
+有能力的同学可以在实现一遍后尝试用less, sass或者stylus等再实现一次</P>
+	</div>
+	<div>
+		<h3>HOW</h3>
+		<P>只需要完成HTML，CSS代码编写，不需要写JavaScript
+设计稿中的图片、文案均可自行设定
+在Chrome中完美实现符合标注中的各项说明
+有能力的同学可以尝试跨浏览器的兼容性
+有能力的同学可以在实现一遍后尝试用less, sass或者stylus等再实现一次</P>
+	</div>
 </div>
 
 <div class="main">
-	
+	<div>
+		<h1>前端技术领域</h1>
+		<p>课程多数题目的解决方案都不是唯一的，这和我们在实际工作中的情况也是一致的。因此，我们的要求不仅仅是实现设计稿的效果，更是要多去思考不同的解决方案，评估不同方案的优劣，然后使用在该场景下最优雅的方式去实现。那些最终没有被我们采纳的方案，同样也可以帮助我们学到很多知识。所以，我们列出的参考资料未必是实现需求所必须的。有的时候，实现题目的要求很简单，甚至参考资料里就有，但是背后的思考和亲手去实践却是任务最关键的一部分。在学习这些资料时，要多思考，多提问，多质疑。相信通过和小伙伴们的交流，能让你的学习事半功倍。</p>
+	</div>
+	<div>
+		<div class="main-right-img"></div>
+		<div>前端</div>
+	</div>
 </div>
 
 <footer class="footer"></footer>
