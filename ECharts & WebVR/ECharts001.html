@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>ECharts入门</title>
+<style type="text/css">
+#main {
+	width:640px;
+	height: 360px;
+	/*border: 1px solid #000;*/
+}
+</style>
+	<!--引入ECharts文件-->
+	<script type="text/javascript" src="../js/echarts.full3.6.2.js"></script>
+</head>
+<body>
+<!-- 编写一个简单的包含 ECharts 柱状图和折线图的展示页面 -->
+<!--任务注意事项
+作品需要在一个直角坐标系上同时显示折线图和柱状图
+可以使用自己收集的数据-->
+<!--为ECharts准备一个具备大小的DOM -->
+<div id="main"></div>
+
+<script type="text/javascript">
+	//基于准备好的dom，初始化echarts实例
+	var myChart = echarts.init(document.getElementById("main"));
+	//指定图标的配置项和数据
+	var option = {
+		title: {
+			text:'ECharts入门示例'
+		},
+		tooltip: {},
+		legend: {
+			data: ['天数','环比']
+		},
+		xAxis: {
+			data: ["晴","阴","多云","小雨","大雨","雷阵雨"]
+		},
+		yAxis: [
+		{
+			type: 'value',
+			name: '天数',
+			min:0,
+			max:10,
+			position:'left',
+		},
+		{
+			type: 'value',
+			name: '环比率',
+			min:0,
+			max:1,
+			position:'right',
+		}
+		],
+		series: [
+		{
+			name: '天数',
+			type: 'bar',
+			yAxisIndex: 0,
+			data: [7,2,4,8,2,3]
+		},
+		{
+			name: '环比',
+			type:'line',
+			yAxisIndex: 1,
+			data:[0.2,0.4,0.5,0.1,0.3,0.1]
+		}
+
+		]
+	};
+
+	//使用刚指定的配置项和数据显示图表
+	myChart.setOption(option);
+</script>
+</body>
+</html>
