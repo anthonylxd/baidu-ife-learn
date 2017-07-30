@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>ECharts实现自定义的统计图表</title>
+<style type="text/css">
+#main {
+	width:720px;
+	height: 480px;
+	/*border: 1px solid #000;*/
+}
+</style>
+	<!--引入ECharts文件-->
+	<script type="text/javascript" src="../js/echarts.full3.6.2.js"></script>
+</head>
+<body>
+<!-- 编写一个简单的包含 ECharts 柱状图和折线图的展示页面 -->
+<!--任务注意事项
+作品需要在一个直角坐标系上同时显示折线图和柱状图
+可以使用自己收集的数据-->
+<!--为ECharts准备一个具备大小的DOM -->
+<div id="main"></div>
+
+<script type="text/javascript">
+	//基于准备好的dom，初始化echarts实例
+	var myChart = echarts.init(document.getElementById("main"));
+	//指定图标的配置项和数据
+	var option = {
+		backgroundColor: '#eee',
+		title: {
+			text:"What's my credit score?",
+			subtext:'Puerp Rico, % decrease on a year earlier',
+			padding:[
+				0,0,10,0,
+			]
+		},
+		tooltip: {},
+		legend: {
+			data: ['Population','GDP']
+		},
+		xAxis: [
+		{
+			position:'bottom',
+			data: [
+			{
+				value:"晴",
+				//突出
+				textStyle:{
+					fontSize:20,
+					color:''
+				}
+			},
+			"阴","多云","小雨","大雨","雷阵雨"]
+		},
+		{
+			position:'top',
+			data:[
+			]
+		}
+
+		],
+		yAxis: [
+		{
+			type: 'value',
+			name: 'Population',
+			min:0,
+			max:10,
+			position:'right',
+			inverse:'true'
+		}
+		],
+		series: [
+		{
+			name: 'Population',
+			type: 'bar',
+			yAxisIndex: 0,
+			data: [7,2,2,8,2,3]
+		},
+		{
+			name: 'GDP',
+			type: 'bar',
+			yAxisIndex: 0,
+			data: [2,4,4,10,4,1]
+		}
+		]
+	
+	};
+
+	//使用刚指定的配置项和数据显示图表
+	myChart.setOption(option);
+</script>
+</body>
+</html>
