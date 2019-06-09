@@ -1,0 +1,29 @@
+html, body, div, h1, h2, h3, label{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    height: 100%;
+}
+h1 {
+    float: left;
+    width:16%;
+    height: 100%;
+    background-color: cornflowerblue;
+    color: #fff;
+    line-height: 50%;
+    padding-top: 10%;
+    text-indent: 32%;
+}
+h2 {
+    padding: 10px 0px; 
+}
+h3{
+    padding: 4px 0px;
+}
+div {
+    margin-left: 18%; 
+}
+label {
+    font-weight: 600;
+}
