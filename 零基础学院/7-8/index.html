@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第七天到第八天，学习布局</title>
+    <!-- 参考如下设计稿实现HTML页面及CSS样式：链接: https://pan.baidu.com/s/1IndqG9nanVhKxwysibZZRg 密码: vfs6
+
+设计稿描述：
+
+设计稿分为头部，中间的Banner，主导航，内容区域，底部
+头部区域为100%宽的一个深色背景，头部中间有一块960px的定宽居中区域，里面包括了左边的Logo和右上角导航
+Banner为100%宽的区块，中间右下方有banner轮显的当前图片数字的示例，其中正在显示的图片对应的数字有特殊样式（注意不需要实现轮显banner的业务逻辑，只是按照设计稿做静态样式）
+主导航区域，有一个100%宽的灰色线条，线条之上，在中间960px区域是导航菜单，当前正在浏览页对应的菜单有特殊样式
+主要内容区域，宽度为960px，里面每个内容都有至少80px的padding，每一个内容的宽度均为自适应，可以使用flex布局
+-->
+<style>
+body, div, span, a {
+    padding: 0px;
+    margin: 0px;
+}    
+.header {
+    width: 100%;
+    color: #fff;
+}
+.nav {
+    background-color:#4D4D4D;
+    height: 60px;
+}
+.nav-logo {
+    float: left;
+    margin-left: 50px;
+    line-height: 60px;
+    font-size: 24px;
+}
+.nav-menu {
+    float: right;
+    margin-right: 30px;
+    line-height: 20px;
+    font-size: 14px;
+}
+.nav-menu a:link,  .nav-menu a:visited{
+    color: #fff;
+}
+.picture {
+    position: relative;
+    background-color: chartreuse;
+    height: 210px;
+}
+.picture-indexs {
+    position: absolute;
+    right: 100px;
+    bottom: 10px;
+}
+.picture-index {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 4px;
+    margin: 0px 2px;
+    border: 1px solid #e3e3e3;
+}
+.picture-index-active {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding-top: 14px;
+}
+.tabs {
+    margin-top: 20px;
+    font-size: 0px;
+}
+.tab {
+    border: 1px solid #e3e3e3;
+    background-color: #e3e3e3;
+    border-bottom: none;
+    padding: 10px;
+    border-top-left-radius: 40%; 
+    border-top-right-radius: 40%; 
+    text-align: center;
+    font-size: 15px;
+}
+.tab-active {
+    border-bottom: none;
+    background-color: #fff;
+}
+</style>
+</head>
+<body>
+    <div class="header">
+        <div class="nav">
+            <div class="nav-logo">
+                Logo
+            </div>
+            <div class="nav-menu">
+                <a href="#">GITHUB</a>
+                <a href="#">Register</a>
+                <a  href="#">Login</a>
+            </div>
+        </div>
+        <div class="picture">
+            <div class="picture-indexs">
+                <span class="picture-index">1</span>
+                <span class="picture-index picture-index-active">2</span>
+                <sapn class="picture-index">3</sapn>
+                <span class="picture-index">4</span>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="tabs">
+            <span class="tab tab-active">HOME</span>
+            <span class="tab">PROFILE</span>
+            <span class="tab">ABOUT</span>
+        </div>
+    </div>
+    <div>
+        <div>
+            <div>
+
+            </div>
+            <div>
+
+            </div>
+            <div>
+
+            </div>
+
+        </div>
+        
+    </div>
+
+    <div class="banner">
+
+    </div>
+</body>
+</html>
