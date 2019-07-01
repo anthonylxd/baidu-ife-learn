@@ -63,9 +63,14 @@ body, div, span, a {
     background-color: rgba(0, 0, 0, 0.1);
     padding-top: 14px;
 }
-.tabs {
+.main {
+    margin: 0px auto;
+    width: 80%;
     margin-top: 20px;
+}
+.tabs {
     font-size: 0px;
+    height: 30px;
 }
 .tab {
     border: 1px solid #e3e3e3;
@@ -80,6 +85,48 @@ body, div, span, a {
 .tab-active {
     border-bottom: none;
     background-color: #fff;
+}
+.contents {
+    text-align: center;
+}
+.content1 div, .content3 div {
+    width: 31%;
+    height: 200px;
+    line-height: 200px;
+    margin: 10px 1%;
+    border: 1px solid #e3e3e3;
+    display: inline-block; 
+}
+.content1 div:first-child,.content3 div:first-child {
+    margin-left: 0px;
+}
+.content1 div:last-child, .content3 div:last-child {
+    margin-right: 0px;
+}
+.content2 div {
+    width: 22.5%;
+    margin: 10px 1%;
+    height: 200px;
+    border: 1px solid #e3e3e3;
+    display: inline-block; 
+}
+.content2 div:first-child {
+    margin-left: 0px;
+}
+.content2 div:last-child {
+    margin-right: 0px; 
+}
+.banner {
+    background-color: #4D4D4D;
+    color: #fff;
+    line-height: 40px;
+    height: 100px;
+    text-align: center;
+    width: 100%;
+}
+.banner a {
+    text-decoration: none;
+    color: #fff;
 }
 </style>
 </head>
@@ -104,23 +151,48 @@ body, div, span, a {
             </div>
         </div>
     </div>
-    <div class="content">
+    <div class="main">
         <div class="tabs">
             <span class="tab tab-active">HOME</span>
             <span class="tab">PROFILE</span>
             <span class="tab">ABOUT</span>
         </div>
-    </div>
-    <div>
-        <div>
-            <div>
-
+        <div class="contents">
+            <div class="content1">
+                <div>
+                    This is Content 1
+                </div>
+                <div>
+                    MaybeContent 2
+                </div>
+                <div>
+                    Content 3
+                </div>
             </div>
-            <div>
-
+            <div class="content2">
+                <div>
+                    Content 4
+                </div>
+                <div>
+                    Content 5
+                </div>
+                <div>
+                    Content 6
+                </div>
+                <div>
+                    Content 7
+                </div>
             </div>
-            <div>
-
+            <div class="content3">
+                <div>
+                    This is Content 8
+                </div>
+                <div>
+                    MaybeContent 9
+                </div>
+                <div>
+                    Content 10
+                </div>
             </div>
 
         </div>
@@ -128,7 +200,7 @@ body, div, span, a {
     </div>
 
     <div class="banner">
-
+        @2019 <a href="https://anthonylxd.github.io/baidu-ife-learn/">ife study</a>
     </div>
 </body>
 </html>
