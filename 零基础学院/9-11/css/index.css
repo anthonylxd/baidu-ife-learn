@@ -1,6 +1,7 @@
-html, body, div, h1, h2, h3, h4, h5, label{
+html, body, div, h1, h2, h3, h4, h5, h6, label {
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 .header{
     width: 100%;
@@ -8,13 +9,46 @@ html, body, div, h1, h2, h3, h4, h5, label{
     text-align: center;
     background: url(../img/header_background.png);
     background-size: 100%;
+    color: #fff;
 }
 .header h1 {
-    line-height: 360px;
-    color: #fff;
+    line-height: 270px;
 }
 .header h3 {
     color: #c8c2bc;
     width: 64%;
     margin: 0px auto;
+}
+.header-search {
+    border: 1px solid #c8c2bc;
+    width: 60%;
+    height: 20%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.header-search h4 {
+    margin-top: 10px;
+}
+.header-search h6 {
+    color: #c8c2bc;
+    margin: 18px 0px;
+}
+.header-search input {
+    display: inline-block;
+    width: 180px;
+    height: 24px;
+    background: rgba(0, 0, 0, 0);
+    text-indent: 2px;
+    border: 1px solid #c8c2bc;
+}
+.header-search input:nth-child(2) {
+    margin: 0px 14px;
+}
+.header-search-content {
+
+}
+.header-search button {
+    padding: 4px 4px;
+    background: #fff;
+    color: #000;
 }
