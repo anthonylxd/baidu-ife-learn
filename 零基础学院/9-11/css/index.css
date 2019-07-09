@@ -1,4 +1,4 @@
-html, body, div, h1, h2, h3, h4, h5, h6, label {
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, label {
     margin: 0;
     padding: 0;
     text-align: center;
@@ -44,11 +44,28 @@ html, body, div, h1, h2, h3, h4, h5, h6, label {
 .header-search input:nth-child(2) {
     margin: 0px 14px;
 }
-.header-search-content {
-
-}
 .header-search button {
     padding: 4px 4px;
     background: #fff;
     color: #000;
+}
+
+.content1 {
+    margin-top: 30px; 
+    width: 80%;
+    margin: 0 auto;
+}
+.content1 h4 {
+    margin: 16px 0px;
+}
+.content1-box:first-child {
+    margin-top: 14px;
+    margin-bottom: 8px;
+}
+.content1-box img {
+    float: left;
+}
+.content1-box span{
+    width: 42%;
+    display: inline-block;
 }
